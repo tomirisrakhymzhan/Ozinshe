@@ -176,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bs-Yg-eqv" userLabel="BigView">
-                                <rect key="frame" x="0.0" y="440" width="393" height="412"/>
+                                <rect key="frame" x="0.0" y="357" width="393" height="412"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4i-EN-dD2">
                                         <rect key="frame" x="24" y="64" width="345" height="1"/>
@@ -317,7 +317,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Қазақша" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Or5-7b-zk7">
-                                        <rect key="frame" x="261" y="151.66666666666663" width="76" height="21"/>
+                                        <rect key="frame" x="261" y="151.66666666666669" width="76" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -391,7 +391,7 @@
                             <constraint firstItem="wS5-Mk-qQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dz1-B6-2Sf"/>
                             <constraint firstItem="tey-A0-UIe" firstAttribute="top" secondItem="ggD-Yg-Qc2" secondAttribute="bottom" constant="32" id="FJL-7p-cwF"/>
                             <constraint firstItem="ggD-Yg-Qc2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="asn-jp-I6f"/>
-                            <constraint firstAttribute="bottom" secondItem="8Bs-Yg-eqv" secondAttribute="bottom" id="bxV-rP-mUI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Bs-Yg-eqv" secondAttribute="bottom" id="bxV-rP-mUI"/>
                             <constraint firstItem="8Bs-Yg-eqv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dSb-nD-5ar"/>
                             <constraint firstItem="ggD-Yg-Qc2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="oWr-fL-S0Y"/>
                             <constraint firstItem="wS5-Mk-qQn" firstAttribute="top" secondItem="tey-A0-UIe" secondAttribute="bottom" constant="8" id="pNV-Qn-YWY"/>
