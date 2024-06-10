@@ -16,6 +16,14 @@ class ProfileViewController: UIViewController {
     }
     
 
+    @IBAction func languagePressed(_ sender: Any) {
+        
+        let languageVC = storyboard?.instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
+        
+        languageVC.modalPresentationStyle = .overFullScreen
+            
+        present(languageVC, animated: true)
+    }
     /*
     // MARK: - Navigation
 

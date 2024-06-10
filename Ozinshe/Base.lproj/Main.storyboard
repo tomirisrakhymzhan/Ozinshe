@@ -262,6 +262,9 @@
                                         <state key="normal" title="Тіл">
                                             <color key="titleColor" name="ProfileColorSet"/>
                                         </state>
+                                        <connections>
+                                            <action selector="languagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFA-2Z-N42"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emq-7D-JUA">
                                         <rect key="frame" x="24" y="65" width="345" height="64"/>
@@ -404,7 +407,7 @@
         <!--Language View Controller-->
         <scene sceneID="SoE-4S-Z4k">
             <objects>
-                <viewController id="Ssc-04-lG0" customClass="LanguageViewController" customModule="Ozinshe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LanguageViewController" id="Ssc-04-lG0" customClass="LanguageViewController" customModule="Ozinshe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2uh-EB-aRx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -437,13 +440,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="65"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Қазақша" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPp-uq-4EB">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Қазақша" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPp-uq-4EB">
                                                             <rect key="frame" x="20" y="22.666666666666671" width="71" height="20"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                             <color key="textColor" name="FontColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="t5z-v5-uje">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="t5z-v5-uje">
                                                             <rect key="frame" x="345" y="20.666666666666671" width="24" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="24" id="3p0-sU-X1a"/>
@@ -484,6 +487,10 @@
                             <constraint firstItem="EZg-au-gjC" firstAttribute="leading" secondItem="rHt-mG-BKI" secondAttribute="leading" id="vQX-6k-0MC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="languageLabel" destination="w8V-yb-AeU" id="8DM-H1-Bw9"/>
+                        <outlet property="tableView" destination="K0y-Vq-xdE" id="o4I-6O-SOZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KS2-yq-RG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
