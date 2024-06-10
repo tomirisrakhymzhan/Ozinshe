@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -147,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="-1810" y="-1"/>
         </scene>
-        <!--View Controller-->
+        <!--Профиль-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ozinshe" customModuleProvider="target" sceneMemberID="viewController">
@@ -155,15 +156,246 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggD-Yg-Qc2">
-                                <rect key="frame" x="76" y="103" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ggD-Yg-Qc2">
+                                <rect key="frame" x="144.66666666666666" y="135" width="104" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="MIc-4N-1tf"/>
+                                    <constraint firstAttribute="height" constant="104" id="N9x-8f-KVi"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Менің профилім" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tey-A0-UIe">
+                                <rect key="frame" x="99.666666666666686" y="271" width="194" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ali@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wS5-Mk-qQn">
+                                <rect key="frame" x="151" y="308" width="91" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bs-Yg-eqv" userLabel="BigView">
+                                <rect key="frame" x="0.0" y="440" width="393" height="412"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4i-EN-dD2">
+                                        <rect key="frame" x="24" y="64" width="345" height="1"/>
+                                        <color key="backgroundColor" name="viewLineColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="bhw-eH-WZB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25S-Yu-nUP">
+                                        <rect key="frame" x="24" y="129" width="345" height="1"/>
+                                        <color key="backgroundColor" name="viewLineColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="oNp-es-Iwg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3u4-mT-bdk">
+                                        <rect key="frame" x="24" y="194" width="345" height="1"/>
+                                        <color key="backgroundColor" name="viewLineColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="znm-Ke-81A"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-nR-4H2">
+                                        <rect key="frame" x="24" y="259" width="345" height="1"/>
+                                        <color key="backgroundColor" name="viewLineColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="pHa-wI-XcS"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-Q5-Wet">
+                                        <rect key="frame" x="24" y="324" width="345" height="1"/>
+                                        <color key="backgroundColor" name="viewLineColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="qCp-Yk-xTX"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG8-E5-8qC">
+                                        <rect key="frame" x="24" y="260" width="345" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="okc-es-d8P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Хабарландырулар">
+                                            <color key="titleColor" name="ProfileColorSet"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOu-IY-6vh">
+                                        <rect key="frame" x="24" y="325" width="345" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="erA-Hp-aou"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Қараңғы режим">
+                                            <color key="titleColor" name="ProfileColorSet"/>
+                                        </state>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O9G-IR-dQs" userLabel="DarkModeSwitch">
+                                        <rect key="frame" x="320" y="341.66666666666663" width="51" height="31"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nIg-np-mGl" userLabel="NotificationsSwitch">
+                                        <rect key="frame" x="320" y="276.66666666666663" width="51" height="31"/>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bG0-PH-b0u">
+                                        <rect key="frame" x="24" y="195" width="345" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="HWI-yF-atc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ережелер мен шарттар">
+                                            <color key="titleColor" name="ProfileColorSet"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf2-BO-Imf">
+                                        <rect key="frame" x="24" y="130" width="345" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="42T-75-5Pj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Тіл">
+                                            <color key="titleColor" name="ProfileColorSet"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emq-7D-JUA">
+                                        <rect key="frame" x="24" y="65" width="345" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="xwd-MQ-qn3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Құпия сөзді өзгерту">
+                                            <color key="titleColor" name="ProfileColorSet"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frm-ob-Lep">
+                                        <rect key="frame" x="24" y="0.0" width="345" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="r6Y-hR-T8e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Жеке деректер">
+                                            <color key="titleColor" name="ProfileColorSet"/>
+                                        </state>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="arD-bb-LAD">
+                                        <rect key="frame" x="345" y="85" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="XX7-Jx-Jbi"/>
+                                            <constraint firstAttribute="width" constant="24" id="gt3-W5-OPO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="qld-dW-t7p">
+                                        <rect key="frame" x="345" y="20" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="8d3-ZN-WK7"/>
+                                            <constraint firstAttribute="width" constant="24" id="lvZ-bV-Ypi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="hNy-DD-cia">
+                                        <rect key="frame" x="345" y="215" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="E09-5l-gmo"/>
+                                            <constraint firstAttribute="width" constant="24" id="rxB-gB-uZq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Xam-WQ-6ac">
+                                        <rect key="frame" x="345" y="150" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="dMb-GB-KKM"/>
+                                            <constraint firstAttribute="width" constant="24" id="de5-xf-e0W"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Қазақша" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Or5-7b-zk7">
+                                        <rect key="frame" x="261" y="151.66666666666663" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Өңдеу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoT-2E-5wN">
+                                        <rect key="frame" x="283" y="21.666666666666686" width="54" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.61176470589999998" green="0.63921568630000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="arD-bb-LAD" firstAttribute="centerY" secondItem="Emq-7D-JUA" secondAttribute="centerY" id="0Bf-dF-7Nj"/>
+                                    <constraint firstAttribute="trailing" secondItem="qld-dW-t7p" secondAttribute="trailing" constant="24" id="0kw-nL-NfK"/>
+                                    <constraint firstItem="O9G-IR-dQs" firstAttribute="centerY" secondItem="JOu-IY-6vh" secondAttribute="centerY" id="49Y-Zl-LBg"/>
+                                    <constraint firstItem="qld-dW-t7p" firstAttribute="centerY" secondItem="frm-ob-Lep" secondAttribute="centerY" id="5lE-tr-vRk"/>
+                                    <constraint firstAttribute="trailing" secondItem="arD-bb-LAD" secondAttribute="trailing" constant="24" id="AWk-dj-ovZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="cvc-Q5-Wet" secondAttribute="trailing" constant="24" id="BeF-n8-E6E"/>
+                                    <constraint firstItem="p4x-nR-4H2" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="E7p-st-KtM"/>
+                                    <constraint firstItem="Emq-7D-JUA" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="Eie-Oh-jXA"/>
+                                    <constraint firstAttribute="trailing" secondItem="s4i-EN-dD2" secondAttribute="trailing" constant="24" id="FHK-zx-Iib"/>
+                                    <constraint firstAttribute="trailing" secondItem="hNy-DD-cia" secondAttribute="trailing" constant="24" id="GPx-7C-K0s"/>
+                                    <constraint firstAttribute="trailing" secondItem="frm-ob-Lep" secondAttribute="trailing" constant="24" id="GcN-u8-SUU"/>
+                                    <constraint firstAttribute="trailing" secondItem="25S-Yu-nUP" secondAttribute="trailing" constant="24" id="IzM-cU-CCJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="p4x-nR-4H2" secondAttribute="trailing" constant="24" id="JDG-SF-Z39"/>
+                                    <constraint firstItem="Xam-WQ-6ac" firstAttribute="centerY" secondItem="nf2-BO-Imf" secondAttribute="centerY" id="L5N-wy-edy"/>
+                                    <constraint firstItem="frm-ob-Lep" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="M4n-Lx-QPa"/>
+                                    <constraint firstAttribute="trailing" secondItem="nf2-BO-Imf" secondAttribute="trailing" constant="24" id="M59-34-34e"/>
+                                    <constraint firstItem="3u4-mT-bdk" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="MHq-fo-KUc"/>
+                                    <constraint firstItem="Xam-WQ-6ac" firstAttribute="leading" secondItem="Or5-7b-zk7" secondAttribute="trailing" constant="8" id="QlN-Xx-nGf"/>
+                                    <constraint firstItem="25S-Yu-nUP" firstAttribute="top" secondItem="s4i-EN-dD2" secondAttribute="bottom" constant="64" id="Tcm-8L-HZL"/>
+                                    <constraint firstAttribute="height" constant="412" id="Xke-4a-tgo"/>
+                                    <constraint firstItem="cvc-Q5-Wet" firstAttribute="top" secondItem="p4x-nR-4H2" secondAttribute="bottom" constant="64" id="Y29-yA-UMd"/>
+                                    <constraint firstAttribute="trailing" secondItem="JOu-IY-6vh" secondAttribute="trailing" constant="24" id="YKc-5a-rjD"/>
+                                    <constraint firstAttribute="trailing" secondItem="O9G-IR-dQs" secondAttribute="trailing" constant="24" id="c89-op-m8s"/>
+                                    <constraint firstItem="JOu-IY-6vh" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="ceZ-sz-Y5T"/>
+                                    <constraint firstItem="YoT-2E-5wN" firstAttribute="centerY" secondItem="frm-ob-Lep" secondAttribute="centerY" id="dBH-mK-Fsg"/>
+                                    <constraint firstItem="3u4-mT-bdk" firstAttribute="top" secondItem="25S-Yu-nUP" secondAttribute="bottom" constant="64" id="dN3-QR-6S4"/>
+                                    <constraint firstAttribute="trailing" secondItem="bG0-PH-b0u" secondAttribute="trailing" constant="24" id="fYj-E5-Ybd"/>
+                                    <constraint firstItem="bG0-PH-b0u" firstAttribute="top" secondItem="3u4-mT-bdk" secondAttribute="bottom" id="fdS-mL-LIl"/>
+                                    <constraint firstItem="JOu-IY-6vh" firstAttribute="top" secondItem="cvc-Q5-Wet" secondAttribute="bottom" id="g6z-Ii-pED"/>
+                                    <constraint firstItem="nIg-np-mGl" firstAttribute="centerY" secondItem="zG8-E5-8qC" secondAttribute="centerY" id="gRA-Qf-HZR"/>
+                                    <constraint firstAttribute="trailing" secondItem="zG8-E5-8qC" secondAttribute="trailing" constant="24" id="gXD-0f-sbJ"/>
+                                    <constraint firstItem="qld-dW-t7p" firstAttribute="leading" secondItem="YoT-2E-5wN" secondAttribute="trailing" constant="8" id="ka5-kx-rVX"/>
+                                    <constraint firstItem="s4i-EN-dD2" firstAttribute="top" secondItem="8Bs-Yg-eqv" secondAttribute="top" constant="64" id="lcw-38-pgd"/>
+                                    <constraint firstAttribute="trailing" secondItem="nIg-np-mGl" secondAttribute="trailing" constant="24" id="nbM-sB-tjv"/>
+                                    <constraint firstItem="zG8-E5-8qC" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="niQ-Qz-hLV"/>
+                                    <constraint firstItem="frm-ob-Lep" firstAttribute="top" secondItem="8Bs-Yg-eqv" secondAttribute="top" id="o33-V2-CVM"/>
+                                    <constraint firstItem="cvc-Q5-Wet" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="obu-am-l4X"/>
+                                    <constraint firstItem="Emq-7D-JUA" firstAttribute="top" secondItem="s4i-EN-dD2" secondAttribute="bottom" id="ps8-IN-yp8"/>
+                                    <constraint firstItem="hNy-DD-cia" firstAttribute="centerY" secondItem="bG0-PH-b0u" secondAttribute="centerY" id="qX6-ko-q9r"/>
+                                    <constraint firstItem="nf2-BO-Imf" firstAttribute="top" secondItem="25S-Yu-nUP" secondAttribute="bottom" id="sJ3-9f-eah"/>
+                                    <constraint firstAttribute="trailing" secondItem="3u4-mT-bdk" secondAttribute="trailing" constant="24" id="sp3-Wr-ViO"/>
+                                    <constraint firstItem="s4i-EN-dD2" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="tpD-Os-JWF"/>
+                                    <constraint firstItem="nf2-BO-Imf" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="u1Z-67-biN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Emq-7D-JUA" secondAttribute="trailing" constant="24" id="ubf-PN-sAF"/>
+                                    <constraint firstItem="bG0-PH-b0u" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="vQo-To-vqT"/>
+                                    <constraint firstItem="zG8-E5-8qC" firstAttribute="top" secondItem="p4x-nR-4H2" secondAttribute="bottom" id="w8x-bv-iNF"/>
+                                    <constraint firstItem="25S-Yu-nUP" firstAttribute="leading" secondItem="8Bs-Yg-eqv" secondAttribute="leading" constant="24" id="wsG-PK-qHy"/>
+                                    <constraint firstItem="p4x-nR-4H2" firstAttribute="top" secondItem="3u4-mT-bdk" secondAttribute="bottom" constant="64" id="y3f-ui-7vt"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xam-WQ-6ac" secondAttribute="trailing" constant="24" id="ySX-6P-chs"/>
+                                    <constraint firstItem="Or5-7b-zk7" firstAttribute="centerY" secondItem="nf2-BO-Imf" secondAttribute="centerY" id="yoq-cg-bjG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Bs-Yg-eqv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Ie-5d-7rh"/>
+                            <constraint firstItem="wS5-Mk-qQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dz1-B6-2Sf"/>
+                            <constraint firstItem="tey-A0-UIe" firstAttribute="top" secondItem="ggD-Yg-Qc2" secondAttribute="bottom" constant="32" id="FJL-7p-cwF"/>
+                            <constraint firstItem="ggD-Yg-Qc2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="asn-jp-I6f"/>
+                            <constraint firstAttribute="bottom" secondItem="8Bs-Yg-eqv" secondAttribute="bottom" id="bxV-rP-mUI"/>
+                            <constraint firstItem="8Bs-Yg-eqv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dSb-nD-5ar"/>
+                            <constraint firstItem="ggD-Yg-Qc2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="oWr-fL-S0Y"/>
+                            <constraint firstItem="wS5-Mk-qQn" firstAttribute="top" secondItem="tey-A0-UIe" secondAttribute="bottom" constant="8" id="pNV-Qn-YWY"/>
+                            <constraint firstItem="tey-A0-UIe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sjC-1X-CQH"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aji-Bj-igF"/>
+                    <navigationItem key="navigationItem" title="Профиль" id="aji-Bj-igF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,6 +428,17 @@
         <image name="Play" width="16.333333969116211" height="16"/>
         <image name="Profile" width="40" height="40"/>
         <image name="Search" width="40" height="40"/>
+        <image name="arrow" width="16" height="16"/>
+        <image name="avatar" width="104" height="104"/>
+        <namedColor name="FontColor">
+            <color red="0.067000001668930054" green="0.093999996781349182" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ProfileColorSet">
+            <color red="0.10999999940395355" green="0.14100000262260437" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="viewLineColor">
+            <color red="0.81999999284744263" green="0.83499997854232788" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
