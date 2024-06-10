@@ -10,6 +10,8 @@
 		BF490C8E2C15D11D004490B4 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF490C8D2C15D11D004490B4 /* FavoriteTableViewCell.swift */; };
 		BF490C902C15D605004490B4 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF490C8F2C15D605004490B4 /* FavoriteTableViewController.swift */; };
 		BF490C922C15D691004490B4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF490C912C15D691004490B4 /* TabViewController.swift */; };
+		BFBDD0F32C175D1800A87E2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD0F22C175D1800A87E2C /* ProfileViewController.swift */; };
+		BFBDD0F52C175D2900A87E2C /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD0F42C175D2900A87E2C /* LanguageViewController.swift */; };
 		BFD5E4082C150D9A00FCE8B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5E4072C150D9A00FCE8B0 /* AppDelegate.swift */; };
 		BFD5E40A2C150D9A00FCE8B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5E4092C150D9A00FCE8B0 /* SceneDelegate.swift */; };
 		BFD5E40C2C150D9A00FCE8B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5E40B2C150D9A00FCE8B0 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 		BF490C8D2C15D11D004490B4 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		BF490C8F2C15D605004490B4 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		BF490C912C15D691004490B4 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		BFBDD0F22C175D1800A87E2C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BFBDD0F42C175D2900A87E2C /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		BFD5E4042C150D9A00FCE8B0 /* Ozinshe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ozinshe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD5E4072C150D9A00FCE8B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD5E4092C150D9A00FCE8B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				BF490C8D2C15D11D004490B4 /* FavoriteTableViewCell.swift */,
 				BF490C8F2C15D605004490B4 /* FavoriteTableViewController.swift */,
 				BF490C912C15D691004490B4 /* TabViewController.swift */,
+				BFBDD0F22C175D1800A87E2C /* ProfileViewController.swift */,
+				BFBDD0F42C175D2900A87E2C /* LanguageViewController.swift */,
 			);
 			path = Ozinshe;
 			sourceTree = "<group>";
@@ -157,8 +163,10 @@
 			files = (
 				BF490C922C15D691004490B4 /* TabViewController.swift in Sources */,
 				BF490C902C15D605004490B4 /* FavoriteTableViewController.swift in Sources */,
+				BFBDD0F52C175D2900A87E2C /* LanguageViewController.swift in Sources */,
 				BFD5E40C2C150D9A00FCE8B0 /* ViewController.swift in Sources */,
 				BF490C8E2C15D11D004490B4 /* FavoriteTableViewCell.swift in Sources */,
+				BFBDD0F32C175D1800A87E2C /* ProfileViewController.swift in Sources */,
 				BFD5E4082C150D9A00FCE8B0 /* AppDelegate.swift in Sources */,
 				BFD5E40A2C150D9A00FCE8B0 /* SceneDelegate.swift in Sources */,
 			);
