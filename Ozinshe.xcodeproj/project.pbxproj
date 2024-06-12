@@ -12,6 +12,7 @@
 		BF490C922C15D691004490B4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF490C912C15D691004490B4 /* TabViewController.swift */; };
 		BF6CE4952C175E6100E70177 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF6CE4932C175E6100E70177 /* Localizable.strings */; };
 		BF96CA5A2C1A31CD003D4BB3 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96CA592C1A31CD003D4BB3 /* PersonalInfoViewController.swift */; };
+		BF96CA5C2C1A3A10003D4BB3 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96CA5B2C1A3A10003D4BB3 /* PasswordChangeViewController.swift */; };
 		BFBDD0F32C175D1800A87E2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD0F22C175D1800A87E2C /* ProfileViewController.swift */; };
 		BFBDD0F52C175D2900A87E2C /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD0F42C175D2900A87E2C /* LanguageViewController.swift */; };
 		BFD5E4082C150D9A00FCE8B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5E4072C150D9A00FCE8B0 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 		BF6CE4962C175E7900E70177 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF6CE4972C175E9E00E70177 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF96CA592C1A31CD003D4BB3 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		BF96CA5B2C1A3A10003D4BB3 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
 		BFBDD0F22C175D1800A87E2C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BFBDD0F42C175D2900A87E2C /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		BFD5E4042C150D9A00FCE8B0 /* Ozinshe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ozinshe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				BFBDD0F42C175D2900A87E2C /* LanguageViewController.swift */,
 				BF6CE4932C175E6100E70177 /* Localizable.strings */,
 				BF96CA592C1A31CD003D4BB3 /* PersonalInfoViewController.swift */,
+				BF96CA5B2C1A3A10003D4BB3 /* PasswordChangeViewController.swift */,
 			);
 			path = Ozinshe;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				BF490C8E2C15D11D004490B4 /* FavoriteTableViewCell.swift in Sources */,
 				BFBDD0F32C175D1800A87E2C /* ProfileViewController.swift in Sources */,
 				BFD5E4082C150D9A00FCE8B0 /* AppDelegate.swift in Sources */,
+				BF96CA5C2C1A3A10003D4BB3 /* PasswordChangeViewController.swift in Sources */,
 				BF96CA5A2C1A31CD003D4BB3 /* PersonalInfoViewController.swift in Sources */,
 				BFD5E40A2C150D9A00FCE8B0 /* SceneDelegate.swift in Sources */,
 			);

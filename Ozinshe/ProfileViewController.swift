@@ -25,10 +25,9 @@ class ProfileViewController: UIViewController , LanguageProtocol{
     @IBOutlet weak var darkModeButton: UIButton!
     @IBOutlet weak var darkModeSwitch: UISwitch!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        notificationsSwitch.isOn = false
         // Do any additional setup after loading the view.
     }
     
@@ -81,6 +80,25 @@ class ProfileViewController: UIViewController , LanguageProtocol{
             darkModeSwitch.window?.overrideUserInterfaceStyle = .light
         }
     }
+    
+    @IBAction func notificationsValueChanged(_ sender: Any) {
+        if notificationsSwitch.isOn {
+            let alert = UIAlertController(title: "ALERT".localized(), message: "NOTIFICATIONS_ON".localized(), preferredStyle: .alert)
+            self.present(alert, animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }else if !notificationsSwitch.isOn{
+            let alert = UIAlertController(title: "ALERT".localized(), message: "NOTIFICATIONS_OFF".localized(), preferredStyle: .alert)
+            self.present(alert, animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
     
     /*
     // MARK: - Navigation

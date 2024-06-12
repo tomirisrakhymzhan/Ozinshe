@@ -243,6 +243,9 @@
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nIg-np-mGl" userLabel="NotificationsSwitch">
                                         <rect key="frame" x="320" y="276.66666666666663" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="notificationsValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nnq-pj-Zks"/>
+                                        </connections>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bG0-PH-b0u">
                                         <rect key="frame" x="24" y="195" width="345" height="64"/>
@@ -279,6 +282,9 @@
                                         <state key="normal" title="Құпия сөзді өзгерту">
                                             <color key="titleColor" name="ProfileColorSet"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="xu8-a4-XJl" kind="show" id="E7P-2s-bbk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frm-ob-Lep">
                                         <rect key="frame" x="24" y="0.0" width="345" height="64"/>
@@ -415,7 +421,7 @@
                         <outlet property="myProfileLabel" destination="tey-A0-UIe" id="wNR-lE-Dg2"/>
                         <outlet property="navigationLabel" destination="aji-Bj-igF" id="GHe-Zf-Rnj"/>
                         <outlet property="notificationsButton" destination="zG8-E5-8qC" id="Uyp-eb-W5F"/>
-                        <outlet property="notificationsSwitch" destination="nIg-np-mGl" id="fVF-6p-yGc"/>
+                        <outlet property="notificationsSwitch" destination="O9G-IR-dQs" id="kVP-g9-DHe"/>
                         <outlet property="passwordChangeButton" destination="Emq-7D-JUA" id="hDK-3r-Uqy"/>
                         <outlet property="personalDataButton" destination="frm-ob-Lep" id="abR-6v-CrP"/>
                         <outlet property="termsAndConditionsButton" destination="bG0-PH-b0u" id="xEW-cO-0n8"/>
@@ -728,6 +734,180 @@
             </objects>
             <point key="canvasLocation" x="1489" y="1618"/>
         </scene>
+        <!--Құпия сөзді өзгерту-->
+        <scene sceneID="UVe-xE-Rwx">
+            <objects>
+                <viewController id="xu8-a4-XJl" customClass="PasswordChangeViewController" customModule="Ozinshe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XHf-y8-eLa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="vki-5G-R3m">
+                                <rect key="frame" x="24" y="123.99999999999999" width="345" height="163.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aAh-DD-jej" userLabel="OnePasswordFieldSV">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="71.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Құпия сөз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eok-GR-P20">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="PASSWORD"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7eZ-Yj-Kqx">
+                                                <rect key="frame" x="0.0" y="28.333333333333343" width="345" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dUj-B4-e9u">
+                                                        <rect key="frame" x="0.0" y="6.6666666666666572" width="293" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="EhS-qB-8Ac"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="ENTER_PASSWORD"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ON-J8-ds9">
+                                                        <rect key="frame" x="301" y="0.0" width="44" height="34"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="Show"/>
+                                                        <connections>
+                                                            <action selector="show1Pressed:" destination="xu8-a4-XJl" eventType="touchUpInside" id="Kph-e3-a5c"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USa-8X-9k1">
+                                                <rect key="frame" x="0.0" y="70.333333333333343" width="345" height="1"/>
+                                                <color key="backgroundColor" name="viewLineColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="jKj-sA-Fsb"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7eZ-Yj-Kqx" firstAttribute="leading" secondItem="aAh-DD-jej" secondAttribute="leading" id="965-Wj-1Nf"/>
+                                            <constraint firstItem="USa-8X-9k1" firstAttribute="leading" secondItem="aAh-DD-jej" secondAttribute="leading" id="fat-U8-egX"/>
+                                            <constraint firstAttribute="trailing" secondItem="7eZ-Yj-Kqx" secondAttribute="trailing" id="rfF-0A-s5S"/>
+                                            <constraint firstAttribute="trailing" secondItem="USa-8X-9k1" secondAttribute="trailing" id="uvq-t6-9el"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zWi-uE-rTo" userLabel="OnePasswordFieldSV">
+                                        <rect key="frame" x="0.0" y="92.333333333333343" width="345" height="71.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Құпия сөзді қайталаңыз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQl-Ya-oUl">
+                                                <rect key="frame" x="0.0" y="0.0" width="206.33333333333334" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="REPEAT_PASSWORD"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tc7-ny-IXn">
+                                                <rect key="frame" x="0.0" y="28.333333333333314" width="345" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdL-NB-Fws">
+                                                        <rect key="frame" x="0.0" y="6.6666666666666856" width="293" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="aOd-KY-1VO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="ENTER_PASSWORD"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8M-WM-zug">
+                                                        <rect key="frame" x="301" y="0.0" width="44" height="34"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="Show"/>
+                                                        <connections>
+                                                            <action selector="show2Pressed:" destination="xu8-a4-XJl" eventType="touchUpInside" id="gnE-mM-k73"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cov-O6-f6P">
+                                                <rect key="frame" x="0.0" y="70.333333333333343" width="345" height="1"/>
+                                                <color key="backgroundColor" name="viewLineColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="fjA-hG-ggo"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Cov-O6-f6P" firstAttribute="leading" secondItem="zWi-uE-rTo" secondAttribute="leading" id="JSg-G5-1yp"/>
+                                            <constraint firstItem="tc7-ny-IXn" firstAttribute="leading" secondItem="zWi-uE-rTo" secondAttribute="leading" id="WhG-Ck-hjs"/>
+                                            <constraint firstAttribute="trailing" secondItem="tc7-ny-IXn" secondAttribute="trailing" id="nDS-Hh-Xjv"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cov-O6-f6P" secondAttribute="trailing" id="shk-9t-SXq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg0-vP-hlA">
+                                <rect key="frame" x="24" y="737" width="345" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="JXj-A3-6na"/>
+                                </constraints>
+                                <color key="tintColor" red="0.4941176471" green="0.1764705882" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Өзгерістерді сақтау">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="SAVE_BUTTON"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="xu8-a4-XJl" eventType="touchUpInside" id="1LF-6u-WN9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NmW-rx-ro4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vki-5G-R3m" firstAttribute="leading" secondItem="NmW-rx-ro4" secondAttribute="leading" constant="24" id="5gj-4n-nKt"/>
+                            <constraint firstItem="Yg0-vP-hlA" firstAttribute="bottom" secondItem="NmW-rx-ro4" secondAttribute="bottom" constant="24" id="E52-vQ-OhK"/>
+                            <constraint firstItem="NmW-rx-ro4" firstAttribute="trailing" secondItem="Yg0-vP-hlA" secondAttribute="trailing" constant="24" id="g3P-0C-oHg"/>
+                            <constraint firstItem="NmW-rx-ro4" firstAttribute="trailing" secondItem="vki-5G-R3m" secondAttribute="trailing" constant="24" id="qTZ-mA-ey8"/>
+                            <constraint firstItem="vki-5G-R3m" firstAttribute="top" secondItem="NmW-rx-ro4" secondAttribute="top" constant="21" id="tdl-zG-rGu"/>
+                            <constraint firstItem="Yg0-vP-hlA" firstAttribute="leading" secondItem="NmW-rx-ro4" secondAttribute="leading" constant="24" id="x1p-2d-niz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Құпия сөзді өзгерту" id="QaL-Tb-tzY">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="BackButton" id="VaN-q8-lBP">
+                            <color key="tintColor" name="arrowColor"/>
+                            <connections>
+                                <action selector="backPressed:" destination="xu8-a4-XJl" id="nMg-sS-KYG"/>
+                            </connections>
+                        </barButtonItem>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="PASSWORD_PAGE"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="firstPasswordTextField" destination="dUj-B4-e9u" id="edv-7g-PlB"/>
+                        <outlet property="saveButton" destination="Yg0-vP-hlA" id="8qI-Eo-QYK"/>
+                        <outlet property="secondPasswordTextField" destination="hdL-NB-Fws" id="Hpz-hq-a50"/>
+                        <outlet property="show1Button" destination="3ON-J8-ds9" id="j4J-40-9h8"/>
+                        <outlet property="show2Button" destination="M8M-WM-zug" id="1YK-Qr-bRW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wo0-Fz-VWr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722.90076335877859" y="2336.6197183098593"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="GTu-P6-jTU">
             <objects>
@@ -757,6 +937,7 @@
         <image name="Play" width="16.333333969116211" height="16"/>
         <image name="Profile" width="40" height="40"/>
         <image name="Search" width="40" height="40"/>
+        <image name="Show" width="20" height="20"/>
         <image name="arrow" width="16" height="16"/>
         <image name="avatar" width="104" height="104"/>
         <namedColor name="FontColor">
