@@ -237,6 +237,9 @@
                                     </button>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O9G-IR-dQs" userLabel="DarkModeSwitch">
                                         <rect key="frame" x="320" y="341.66666666666663" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="darkModeChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="EFy-6Y-74Q"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nIg-np-mGl" userLabel="NotificationsSwitch">
                                         <rect key="frame" x="320" y="276.66666666666663" width="51" height="31"/>
@@ -287,6 +290,9 @@
                                         <state key="normal" title="Жеке деректер">
                                             <color key="titleColor" name="ProfileColorSet"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="pDs-QF-4Tb" kind="show" id="xP8-ee-12m"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="arD-bb-LAD">
                                         <rect key="frame" x="345" y="85" width="24" height="24"/>
@@ -512,6 +518,216 @@
             </objects>
             <point key="canvasLocation" x="753.43511450381675" y="1618.3098591549297"/>
         </scene>
+        <!--Жеке деректер-->
+        <scene sceneID="Qaa-gY-VlJ">
+            <objects>
+                <viewController id="pDs-QF-4Tb" customClass="PersonalInfoViewController" customModule="Ozinshe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T0J-E1-UqQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-1U-cw6">
+                                <rect key="frame" x="24" y="124" width="345" height="299"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wEs-VF-aoJ" userLabel="OneFieldSV">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="59"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сіздің атыңыз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRZ-0i-qwN">
+                                                <rect key="frame" x="0.0" y="0.0" width="99.333333333333329" height="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" red="0.61176470589999998" green="0.63921568630000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="NAME"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMY-S2-XF8">
+                                                <rect key="frame" x="0.0" y="27" width="345" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="lJa-B1-dGF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRc-zp-j2F">
+                                                <rect key="frame" x="0.0" y="58" width="345" height="1"/>
+                                                <color key="backgroundColor" name="viewLineColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="4Sm-g6-OKK"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="UMY-S2-XF8" secondAttribute="trailing" id="BNn-8O-aYo"/>
+                                            <constraint firstItem="aRc-zp-j2F" firstAttribute="leading" secondItem="wEs-VF-aoJ" secondAttribute="leading" id="d5f-2z-8xj"/>
+                                            <constraint firstItem="UMY-S2-XF8" firstAttribute="leading" secondItem="wEs-VF-aoJ" secondAttribute="leading" id="jHk-4s-pkv"/>
+                                            <constraint firstAttribute="trailing" secondItem="aRc-zp-j2F" secondAttribute="trailing" id="jMn-Bo-j8T"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XVc-B8-8Ow" userLabel="OneFieldSV">
+                                        <rect key="frame" x="0.0" y="80" width="345" height="59"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwF-KQ-gR4">
+                                                <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" red="0.61176470589999998" green="0.63921568630000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5Z-yv-zXi">
+                                                <rect key="frame" x="0.0" y="27" width="345" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="nrj-V0-dyG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMW-lh-gwW">
+                                                <rect key="frame" x="0.0" y="58" width="345" height="1"/>
+                                                <color key="backgroundColor" name="viewLineColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="srA-hz-Wlw"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kMW-lh-gwW" firstAttribute="leading" secondItem="XVc-B8-8Ow" secondAttribute="leading" id="2yH-u1-u6O"/>
+                                            <constraint firstItem="X5Z-yv-zXi" firstAttribute="leading" secondItem="XVc-B8-8Ow" secondAttribute="leading" id="SEX-sZ-ecK"/>
+                                            <constraint firstAttribute="trailing" secondItem="kMW-lh-gwW" secondAttribute="trailing" id="Wgs-0y-6Xx"/>
+                                            <constraint firstAttribute="trailing" secondItem="X5Z-yv-zXi" secondAttribute="trailing" id="pG6-1g-pqs"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3rK-8z-NyR" userLabel="OneFieldSV">
+                                        <rect key="frame" x="0.0" y="160" width="345" height="59"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-Yx-dEh">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" red="0.61176470589999998" green="0.63921568630000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="PHONE"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1RY-E2-wUC">
+                                                <rect key="frame" x="0.0" y="27" width="345" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="kgN-s0-cLh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qh-QW-1Fo">
+                                                <rect key="frame" x="0.0" y="58" width="345" height="1"/>
+                                                <color key="backgroundColor" name="viewLineColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Jz8-5g-P7s"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5Qh-QW-1Fo" secondAttribute="trailing" id="7J7-Jh-ZoP"/>
+                                            <constraint firstItem="1RY-E2-wUC" firstAttribute="leading" secondItem="3rK-8z-NyR" secondAttribute="leading" id="RgX-PI-5Ah"/>
+                                            <constraint firstAttribute="trailing" secondItem="1RY-E2-wUC" secondAttribute="trailing" id="VHD-HR-3ly"/>
+                                            <constraint firstItem="5Qh-QW-1Fo" firstAttribute="leading" secondItem="3rK-8z-NyR" secondAttribute="leading" id="kpn-R3-GYP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2wp-5f-dPQ" userLabel="OneFieldSV">
+                                        <rect key="frame" x="0.0" y="240" width="345" height="59"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Туылған күні" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHf-C1-b7K">
+                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="textColor" red="0.61176470589999998" green="0.63921568630000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="BIRTHDAY"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c69-1g-z16">
+                                                <rect key="frame" x="0.0" y="27" width="345" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="pzd-6Z-vET"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="bday"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOB-A6-wGi">
+                                                <rect key="frame" x="0.0" y="58" width="345" height="1"/>
+                                                <color key="backgroundColor" name="viewLineColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="bsG-w1-HZD"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uOB-A6-wGi" firstAttribute="leading" secondItem="2wp-5f-dPQ" secondAttribute="leading" id="Knt-gf-ccx"/>
+                                            <constraint firstAttribute="trailing" secondItem="c69-1g-z16" secondAttribute="trailing" id="OUh-mU-VZK"/>
+                                            <constraint firstItem="c69-1g-z16" firstAttribute="leading" secondItem="2wp-5f-dPQ" secondAttribute="leading" id="iKJ-Is-d7d"/>
+                                            <constraint firstAttribute="trailing" secondItem="uOB-A6-wGi" secondAttribute="trailing" id="p45-Wk-zpQ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82P-iR-MFe">
+                                <rect key="frame" x="24" y="692" width="345" height="56"/>
+                                <color key="backgroundColor" red="0.49411764705882355" green="0.1764705882352941" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="2i4-fk-lko"/>
+                                </constraints>
+                                <color key="tintColor" red="0.49411764705882355" green="0.1764705882352941" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Өзгерістерді сақтау">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="SAVE_BUTTON"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveDataPressed:" destination="pDs-QF-4Tb" eventType="touchUpInside" id="T0j-Fm-7w4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q80-68-QYk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q80-68-QYk" firstAttribute="bottom" secondItem="82P-iR-MFe" secondAttribute="bottom" constant="21" id="0Hc-1b-3Cf"/>
+                            <constraint firstItem="PyK-1U-cw6" firstAttribute="leading" secondItem="Q80-68-QYk" secondAttribute="leading" constant="24" id="B30-kO-lpT"/>
+                            <constraint firstItem="Q80-68-QYk" firstAttribute="trailing" secondItem="PyK-1U-cw6" secondAttribute="trailing" constant="24" id="KjB-BU-Q9L"/>
+                            <constraint firstItem="82P-iR-MFe" firstAttribute="leading" secondItem="Q80-68-QYk" secondAttribute="leading" constant="24" id="Y5U-hM-Gah"/>
+                            <constraint firstItem="PyK-1U-cw6" firstAttribute="top" secondItem="Q80-68-QYk" secondAttribute="top" constant="21" id="dMq-By-kwA"/>
+                            <constraint firstItem="Q80-68-QYk" firstAttribute="trailing" secondItem="82P-iR-MFe" secondAttribute="trailing" constant="24" id="jxy-sA-J5G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Жеке деректер" id="LFm-6v-lYz">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="BackButton" id="qwU-pS-ypa">
+                            <color key="tintColor" name="arrowColor"/>
+                            <connections>
+                                <action selector="backPressed:" destination="pDs-QF-4Tb" id="0rm-tl-qxA"/>
+                            </connections>
+                        </barButtonItem>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="PERSONAL_DATA"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateOfBirthTextField" destination="c69-1g-z16" id="RpW-TI-Av9"/>
+                        <outlet property="emailTextField" destination="X5Z-yv-zXi" id="Q5V-IT-WnP"/>
+                        <outlet property="nameTextField" destination="UMY-S2-XF8" id="fXh-Ph-Wvq"/>
+                        <outlet property="phoneTextField" destination="1RY-E2-wUC" id="TVM-jF-rbG"/>
+                        <outlet property="saveButton" destination="82P-iR-MFe" id="3R4-wG-XK6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnu-fH-HrL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="1618"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="GTu-P6-jTU">
             <objects>
@@ -533,6 +749,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackButton" width="40" height="40"/>
         <image name="Check" width="24" height="24"/>
         <image name="Favorite" width="40" height="40"/>
         <image name="Home" width="40" height="40"/>
@@ -547,6 +764,9 @@
         </namedColor>
         <namedColor name="ProfileColorSet">
             <color red="0.10999999940395355" green="0.14100000262260437" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="arrowColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="viewLineColor">
             <color red="0.81999999284744263" green="0.83499997854232788" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

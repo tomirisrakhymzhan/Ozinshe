@@ -73,6 +73,15 @@ class ProfileViewController: UIViewController , LanguageProtocol{
         languageButton.setTitle("LANGUAGE".localized(), for: .normal)
 
     }
+    
+    @IBAction func darkModeChange(_ sender: Any) {
+        if darkModeSwitch.isOn {
+            darkModeSwitch.window?.overrideUserInterfaceStyle = .dark
+        }else if !darkModeSwitch.isOn {
+            darkModeSwitch.window?.overrideUserInterfaceStyle = .light
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
