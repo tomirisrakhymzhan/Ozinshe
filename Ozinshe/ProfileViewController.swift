@@ -7,7 +7,7 @@
 
 import UIKit
 import Localize_Swift
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController , LanguageProtocol{
 
     
     @IBOutlet weak var navigationLabel: UINavigationItem!
@@ -41,8 +41,13 @@ class ProfileViewController: UIViewController {
         let languageVC = storyboard?.instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
         
         languageVC.modalPresentationStyle = .overFullScreen
+        languageVC.delegate = self
             
         present(languageVC, animated: true)
+    }
+    
+    func languageDidChange() {
+        configureLabels()
     }
     
     func configureLabels(){

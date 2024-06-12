@@ -10,7 +10,8 @@ import Localize_Swift
 protocol LanguageProtocol{
     func languageDidChange()
 }
-class LanguageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class LanguageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,
+                                UIGestureRecognizerDelegate{
 
     
     
@@ -22,22 +23,36 @@ class LanguageViewController: UIViewController, UITableViewDelegate, UITableView
     
     var delegate: LanguageProtocol?
 
-        var languageArray = [["English", "en"], ["Қазақша", "kk"], ["Русский", "ru"]]
+    var languageArray = [["English", "en"], ["Қазақша", "kk"], ["Русский", "ru"]]
 
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-            // Do any additional setup after loading the view.
-            backgroundView.layer.cornerRadius = 32
-            backgroundView.clipsToBounds = true
-            backgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-            
-            tableView.dataSource = self
-            tableView.delegate = self
+        // Do any additional setup after loading the view.
+        backgroundView.layer.cornerRadius = 32
+        backgroundView.clipsToBounds = true
+        backgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissView))
+        tap.delegate = self
+        view.addGestureRecognizer(tap)
+        
+    }
+        
+    @objc func dismissView(){
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isDescendant(of: backgroundView))! {
+            return false
         }
-        
-
+        return true
+    }
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return languageArray.count
         }
