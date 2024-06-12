@@ -399,6 +399,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Профиль" id="aji-Bj-igF"/>
+                    <connections>
+                        <outlet property="darkModeButton" destination="JOu-IY-6vh" id="Pfn-Pg-cgQ"/>
+                        <outlet property="darkModeSwitch" destination="O9G-IR-dQs" id="PSi-dx-TSI"/>
+                        <outlet property="editPersonalDataLabel" destination="YoT-2E-5wN" id="TXA-qf-24k"/>
+                        <outlet property="emailLabel" destination="wS5-Mk-qQn" id="Cb8-7p-I1O"/>
+                        <outlet property="languageButton" destination="nf2-BO-Imf" id="OmI-gl-UL3"/>
+                        <outlet property="languageSelectionLabel" destination="Or5-7b-zk7" id="gWs-j9-g2Z"/>
+                        <outlet property="myProfileLabel" destination="tey-A0-UIe" id="wNR-lE-Dg2"/>
+                        <outlet property="navigationLabel" destination="aji-Bj-igF" id="GHe-Zf-Rnj"/>
+                        <outlet property="notificationsButton" destination="zG8-E5-8qC" id="Uyp-eb-W5F"/>
+                        <outlet property="notificationsSwitch" destination="nIg-np-mGl" id="fVF-6p-yGc"/>
+                        <outlet property="passwordChangeButton" destination="Emq-7D-JUA" id="hDK-3r-Uqy"/>
+                        <outlet property="personalDataButton" destination="frm-ob-Lep" id="abR-6v-CrP"/>
+                        <outlet property="termsAndConditionsButton" destination="bG0-PH-b0u" id="xEW-cO-0n8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -488,6 +503,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="EZg-au-gjC" id="aav-hh-0UF"/>
                         <outlet property="languageLabel" destination="w8V-yb-AeU" id="8DM-H1-Bw9"/>
                         <outlet property="tableView" destination="K0y-Vq-xdE" id="o4I-6O-SOZ"/>
                     </connections>

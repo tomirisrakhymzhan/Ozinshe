@@ -18,6 +18,7 @@ class LanguageViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var languageLabel: UILabel!
     
+    @IBOutlet weak var backgroundView: UIView!
     
     var delegate: LanguageProtocol?
 
@@ -28,6 +29,9 @@ class LanguageViewController: UIViewController, UITableViewDelegate, UITableView
             super.viewDidLoad()
 
             // Do any additional setup after loading the view.
+            backgroundView.layer.cornerRadius = 32
+            backgroundView.clipsToBounds = true
+            backgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
             
             tableView.dataSource = self
             tableView.delegate = self
