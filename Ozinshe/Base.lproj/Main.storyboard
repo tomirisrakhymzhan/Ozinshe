@@ -850,7 +850,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg0-vP-hlA">
-                                <rect key="frame" x="24" y="737" width="345" height="56"/>
+                                <rect key="frame" x="24" y="692" width="345" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="JXj-A3-6na"/>
                                 </constraints>
@@ -878,7 +878,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vki-5G-R3m" firstAttribute="leading" secondItem="NmW-rx-ro4" secondAttribute="leading" constant="24" id="5gj-4n-nKt"/>
-                            <constraint firstItem="Yg0-vP-hlA" firstAttribute="bottom" secondItem="NmW-rx-ro4" secondAttribute="bottom" constant="24" id="E52-vQ-OhK"/>
+                            <constraint firstItem="NmW-rx-ro4" firstAttribute="bottom" secondItem="Yg0-vP-hlA" secondAttribute="bottom" constant="21" id="B9W-5C-f9r"/>
                             <constraint firstItem="NmW-rx-ro4" firstAttribute="trailing" secondItem="Yg0-vP-hlA" secondAttribute="trailing" constant="24" id="g3P-0C-oHg"/>
                             <constraint firstItem="NmW-rx-ro4" firstAttribute="trailing" secondItem="vki-5G-R3m" secondAttribute="trailing" constant="24" id="qTZ-mA-ey8"/>
                             <constraint firstItem="vki-5G-R3m" firstAttribute="top" secondItem="NmW-rx-ro4" secondAttribute="top" constant="21" id="tdl-zG-rGu"/>

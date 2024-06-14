@@ -7,6 +7,8 @@
 
 import UIKit
 import Localize_Swift
+import SVProgressHUD
+
 class ProfileViewController: UIViewController , LanguageProtocol{
 
     
@@ -33,6 +35,7 @@ class ProfileViewController: UIViewController , LanguageProtocol{
     
     override func viewDidAppear(_ animated: Bool) {
         configureLabels()
+        loadUserData()
     }
 
     @IBAction func languagePressed(_ sender: Any) {
@@ -99,7 +102,39 @@ class ProfileViewController: UIViewController , LanguageProtocol{
         }
     }
     
-    
+    func loadUserData(){
+        guard let url = URL(string: Urls.GET_PROFILE) else {
+            print("Could not get url: \(Urls.GET_PROFILE)")
+            return
+        }
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.setValue("Bearer \(Storage.sharedInstance.accessToken)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        let task = session.dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            guard let data = data else {
+                print("No data received")
+                return
+            }
+            self.handleResponseData(data: data)
+        }
+        task.resume()
+    }
+    func handleResponseData(data: Data){
+        do {
+            let person = try JSONDecoder().decode(Person.self, from: data)
+            print("Decoded JSON to Swift object: \(person)")
+            DispatchQueue.main.async {
+                self.emailLabel.text = person.user?.email ?? "no email available"
+            }
+        } catch {
+            print("Failed to decode JSON: \(error)")
+        }
+    }
     /*
     // MARK: - Navigation
 

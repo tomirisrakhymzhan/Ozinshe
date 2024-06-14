@@ -10,6 +10,10 @@
 		BF490C8E2C15D11D004490B4 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF490C8D2C15D11D004490B4 /* FavoriteTableViewCell.swift */; };
 		BF490C902C15D605004490B4 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF490C8F2C15D605004490B4 /* FavoriteTableViewController.swift */; };
 		BF490C922C15D691004490B4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF490C912C15D691004490B4 /* TabViewController.swift */; };
+		BF69D0CA2C1B03C10005B63B /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = BF69D0C92C1B03C10005B63B /* SVProgressHUD */; };
+		BF69D0CD2C1B04580005B63B /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69D0CC2C1B04580005B63B /* Urls.swift */; };
+		BF69D0CF2C1B68300005B63B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69D0CE2C1B682F0005B63B /* Storage.swift */; };
+		BF69D0D22C1B6C3D0005B63B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69D0D12C1B6C3D0005B63B /* Profile.swift */; };
 		BF6CE4952C175E6100E70177 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF6CE4932C175E6100E70177 /* Localizable.strings */; };
 		BF96CA5A2C1A31CD003D4BB3 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96CA592C1A31CD003D4BB3 /* PersonalInfoViewController.swift */; };
 		BF96CA5C2C1A3A10003D4BB3 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96CA5B2C1A3A10003D4BB3 /* PasswordChangeViewController.swift */; };
@@ -28,6 +32,9 @@
 		BF490C8D2C15D11D004490B4 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		BF490C8F2C15D605004490B4 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		BF490C912C15D691004490B4 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		BF69D0CC2C1B04580005B63B /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		BF69D0CE2C1B682F0005B63B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		BF69D0D12C1B6C3D0005B63B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BF6CE4942C175E6100E70177 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF6CE4962C175E7900E70177 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF6CE4972C175E9E00E70177 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF69D0CA2C1B03C10005B63B /* SVProgressHUD in Frameworks */,
 				BFD5E41D2C151C5D00FCE8B0 /* Localize_Swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +65,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF69D0C62C1B03770005B63B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF69D0C72C1B03910005B63B /* Profile */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF69D0C72C1B03910005B63B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BFBDD0F22C175D1800A87E2C /* ProfileViewController.swift */,
+				BF96CA592C1A31CD003D4BB3 /* PersonalInfoViewController.swift */,
+				BF96CA5B2C1A3A10003D4BB3 /* PasswordChangeViewController.swift */,
+				BFBDD0F42C175D2900A87E2C /* LanguageViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF69D0CB2C1B04220005B63B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BF69D0CC2C1B04580005B63B /* Urls.swift */,
+				BF69D0CE2C1B682F0005B63B /* Storage.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BF69D0D32C1B6C640005B63B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF69D0D12C1B6C3D0005B63B /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BFD5E3FB2C150D9A00FCE8B0 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +120,9 @@
 		BFD5E4062C150D9A00FCE8B0 /* Ozinshe */ = {
 			isa = PBXGroup;
 			children = (
+				BF69D0D32C1B6C640005B63B /* Models */,
+				BF69D0CB2C1B04220005B63B /* Utilities */,
+				BF69D0C62C1B03770005B63B /* Controllers */,
 				BFD5E4072C150D9A00FCE8B0 /* AppDelegate.swift */,
 				BFD5E4092C150D9A00FCE8B0 /* SceneDelegate.swift */,
 				BFD5E40B2C150D9A00FCE8B0 /* ViewController.swift */,
@@ -86,11 +133,7 @@
 				BF490C8D2C15D11D004490B4 /* FavoriteTableViewCell.swift */,
 				BF490C8F2C15D605004490B4 /* FavoriteTableViewController.swift */,
 				BF490C912C15D691004490B4 /* TabViewController.swift */,
-				BFBDD0F22C175D1800A87E2C /* ProfileViewController.swift */,
-				BFBDD0F42C175D2900A87E2C /* LanguageViewController.swift */,
 				BF6CE4932C175E6100E70177 /* Localizable.strings */,
-				BF96CA592C1A31CD003D4BB3 /* PersonalInfoViewController.swift */,
-				BF96CA5B2C1A3A10003D4BB3 /* PasswordChangeViewController.swift */,
 			);
 			path = Ozinshe;
 			sourceTree = "<group>";
@@ -113,6 +156,7 @@
 			name = Ozinshe;
 			packageProductDependencies = (
 				BFD5E41C2C151C5D00FCE8B0 /* Localize_Swift */,
+				BF69D0C92C1B03C10005B63B /* SVProgressHUD */,
 			);
 			productName = Ozinshe;
 			productReference = BFD5E4042C150D9A00FCE8B0 /* Ozinshe.app */;
@@ -146,6 +190,7 @@
 			mainGroup = BFD5E3FB2C150D9A00FCE8B0;
 			packageReferences = (
 				BFD5E41B2C151C5D00FCE8B0 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
+				BF69D0C82C1B03C10005B63B /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 			);
 			productRefGroup = BFD5E4052C150D9A00FCE8B0 /* Products */;
 			projectDirPath = "";
@@ -178,7 +223,10 @@
 				BF490C922C15D691004490B4 /* TabViewController.swift in Sources */,
 				BF490C902C15D605004490B4 /* FavoriteTableViewController.swift in Sources */,
 				BFBDD0F52C175D2900A87E2C /* LanguageViewController.swift in Sources */,
+				BF69D0D22C1B6C3D0005B63B /* Profile.swift in Sources */,
 				BFD5E40C2C150D9A00FCE8B0 /* ViewController.swift in Sources */,
+				BF69D0CD2C1B04580005B63B /* Urls.swift in Sources */,
+				BF69D0CF2C1B68300005B63B /* Storage.swift in Sources */,
 				BF490C8E2C15D11D004490B4 /* FavoriteTableViewCell.swift in Sources */,
 				BFBDD0F32C175D1800A87E2C /* ProfileViewController.swift in Sources */,
 				BFD5E4082C150D9A00FCE8B0 /* AppDelegate.swift in Sources */,
@@ -419,6 +467,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BF69D0C82C1B03C10005B63B /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
 		BFD5E41B2C151C5D00FCE8B0 /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/marmelroy/Localize-Swift";
@@ -430,6 +486,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BF69D0C92C1B03C10005B63B /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF69D0C82C1B03C10005B63B /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
 		BFD5E41C2C151C5D00FCE8B0 /* Localize_Swift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BFD5E41B2C151C5D00FCE8B0 /* XCRemoteSwiftPackageReference "Localize-Swift" */;
