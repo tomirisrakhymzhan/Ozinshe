@@ -67,3 +67,6 @@
 "NOTIFICATIONS_ON" = "Notifications are on";
 "NOTIFICATIONS_OFF" = "Notifications are off";
 "WRONG_PASSWORD" = "Passwords don't match";
+"FILL_ALL_FIELDS" = "Fields cannot be empty";
+"INVALID_EMAIL" = "Invalid email format";
+"WEAK_PASSWORD" = "Weak password, it must be longer than 6 characters";

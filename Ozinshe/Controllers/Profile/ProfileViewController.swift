@@ -135,14 +135,11 @@ class ProfileViewController: UIViewController , LanguageProtocol{
             print("Failed to decode JSON: \(error)")
         }
     }
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func logoutTapped(_ sender: Any) {
+        let logoutVC = storyboard?.instantiateViewController(withIdentifier: "LogoutViewController") as! LogoutViewController
+        logoutVC.modalPresentationStyle = .overFullScreen
+        present(logoutVC, animated: true)
     }
-    */
-
 }
