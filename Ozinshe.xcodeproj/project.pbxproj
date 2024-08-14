@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BF394A782C4E8DE9009C9945 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF394A772C4E8DE9009C9945 /* LogoutViewController.swift */; };
+		BF394ACC2C53BCC5009C9945 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF394ACB2C53BCC5009C9945 /* SearchViewController.swift */; };
+		BF394ACE2C553F11009C9945 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF394ACD2C553F11009C9945 /* CategoryTableViewController.swift */; };
+		BF394AD12C55409A009C9945 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF394AD02C55409A009C9945 /* MovieInfoViewController.swift */; };
 		BF490C902C15D605004490B4 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF490C8F2C15D605004490B4 /* FavoriteTableViewController.swift */; };
 		BF490C922C15D691004490B4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF490C912C15D691004490B4 /* TabViewController.swift */; };
 		BF5BE71F2C36F07100F946E7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = BF5BE71E2C36F07100F946E7 /* SDWebImage */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		BF394A772C4E8DE9009C9945 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		BF394ACB2C53BCC5009C9945 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BF394ACD2C553F11009C9945 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		BF394AD02C55409A009C9945 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
 		BF490C8F2C15D605004490B4 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		BF490C912C15D691004490B4 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		BF69D0CC2C1B04580005B63B /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
@@ -81,9 +87,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF394ACA2C53BC95009C9945 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BF394ACB2C53BCC5009C9945 /* SearchViewController.swift */,
+				BF394ACD2C553F11009C9945 /* CategoryTableViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		BF394ACF2C554062009C9945 /* MovieInfo */ = {
+			isa = PBXGroup;
+			children = (
+				BF394AD02C55409A009C9945 /* MovieInfoViewController.swift */,
+			);
+			path = MovieInfo;
+			sourceTree = "<group>";
+		};
 		BF69D0C62C1B03770005B63B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF394ACF2C554062009C9945 /* MovieInfo */,
+				BF394ACA2C53BC95009C9945 /* Search */,
 				BF9B46492C36D61900537669 /* Favorite */,
 				BF69D0C72C1B03910005B63B /* Profile */,
 				BF69D16E2C32D20A0005B63B /* SignUpViewController.swift */,
@@ -266,14 +291,17 @@
 				BF9B46462C36915300537669 /* TextFieldWithPadding.swift in Sources */,
 				BF9B464F2C36D86C00537669 /* MovieCell.swift in Sources */,
 				BF490C902C15D605004490B4 /* FavoriteTableViewController.swift in Sources */,
+				BF394ACC2C53BCC5009C9945 /* SearchViewController.swift in Sources */,
 				BFBDD0F52C175D2900A87E2C /* LanguageViewController.swift in Sources */,
 				BF69D0D22C1B6C3D0005B63B /* Profile.swift in Sources */,
+				BF394ACE2C553F11009C9945 /* CategoryTableViewController.swift in Sources */,
 				BFD5E40C2C150D9A00FCE8B0 /* ViewController.swift in Sources */,
 				BF69D0CD2C1B04580005B63B /* Urls.swift in Sources */,
 				BF69D0CF2C1B68300005B63B /* Storage.swift in Sources */,
 				BF69D1712C32D2230005B63B /* SignInViewController.swift in Sources */,
 				BF69D16F2C32D20A0005B63B /* SignUpViewController.swift in Sources */,
 				BFBDD0F32C175D1800A87E2C /* ProfileViewController.swift in Sources */,
+				BF394AD12C55409A009C9945 /* MovieInfoViewController.swift in Sources */,
 				BFD5E4082C150D9A00FCE8B0 /* AppDelegate.swift in Sources */,
 				BF96CA5C2C1A3A10003D4BB3 /* PasswordChangeViewController.swift in Sources */,
 				BF96CA5A2C1A31CD003D4BB3 /* PersonalInfoViewController.swift in Sources */,

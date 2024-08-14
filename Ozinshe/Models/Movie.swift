@@ -28,7 +28,7 @@ struct Category: Codable {
     let name: String?
     let fileID: Int?
     let link: String?
-    let movieCount: JSONNull?
+    let movieCount: Int?
 
     enum CodingKeys: String, CodingKey {
         case id, name
@@ -54,7 +54,7 @@ struct Poster: Codable {
 struct Video: Codable {
     let id: Int?
     let link: String?
-    let seasonID: JSONNull?
+    let seasonID: Int?
     let number: Int?
 
     enum CodingKeys: String, CodingKey {
@@ -64,31 +64,10 @@ struct Video: Codable {
     }
 }
 
-typealias Movies = [Movie]
-
-// MARK: - Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-            return true
-    }
-
-    public var hashValue: Int {
-            return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-            let container = try decoder.singleValueContainer()
-            if !container.decodeNil() {
-                    throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-            }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-            var container = encoder.singleValueContainer()
-            try container.encodeNil()
-    }
+struct CategoryMoviesResponse: Codable {
+    let content: [Movie]?
 }
+
+
+typealias Movies = [Movie]
+typealias Categories = [Category]
